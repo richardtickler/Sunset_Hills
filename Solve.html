@@ -38,6 +38,7 @@
 
         .bldgCount {
             font-weight: 700;
+            font-size:large;
         }
     </style>
     <!-- Navigation -->
@@ -115,12 +116,12 @@
     <script>
         $("#btnSunset").on("click", function () {
 
-            let bldg1 = parseInt($("#sunsetInt1").val());
-            let bldg2 = parseInt($("#sunsetInt2").val());
-            let bldg3 = parseInt($("#sunsetInt3").val());
-            let bldg4 = parseInt($("#sunsetInt4").val());
-            let bldg5 = parseInt($("#sunsetInt5").val());
-            let bldg6 = parseInt($("#sunsetInt6").val());
+            let bldg1 = parseInt($("#sunsetIn1").val());
+            let bldg2 = parseInt($("#sunsetIn2").val());
+            let bldg3 = parseInt($("#sunsetIn3").val());
+            let bldg4 = parseInt($("#sunsetIn4").val());
+            let bldg5 = parseInt($("#sunsetIn5").val());
+            let bldg6 = parseInt($("#sunsetIn6").val());
 
             let bldgArray = [bldg1, bldg2, bldg3, bldg4, bldg5, bldg6];
 
@@ -134,10 +135,11 @@
                 if (currentBldg > tallest) {
                     output.push(currentBldg);
                     tallest = currentBldg;
+                   
                 }
 
                 //show output here
-                $("#sunsetOut").html(`Given the input, ${output} building(s) can see the sunset. <br /> The buildings that can see the sunset are [${output.toString()}]`)
+                $("#sunsetOut").html(`Given the input, <span class='bldgCount'${output.length}</span> building(s) can see the sunset. <br /> The buildings that can see the sunset are [${output.toString()}]`)
 
 
 
