@@ -26,19 +26,22 @@
         .sunsetIn {
             margin-top: 50px;
             border: 2px solid;
-            font-weight:600
-            
-            
+            font-weight: 600
         }
 
-        hr{
+        hr {
             height: 5px;
-            background-color:black
+            background-color: black
         }
 
         .bldgCount {
             font-weight: 700;
-            font-size:large;
+            font-size: large;
+        }
+    </style>
+    <style>
+        #grad {
+            background-image: linear-gradient(red, yellow);
         }
     </style>
     <!-- Navigation -->
@@ -76,17 +79,20 @@
     </nav>
 
     <!-- Page Content -->
+
+
     <div class="container">
-        <div class="row">
+
+        <div class="row #grad">
             <div class="row">
-                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn2" placeholder="Enter number 2" /></div>
-                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn1" placeholder="Enter number 1" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn2" placeholder="Enter number 1" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn1" placeholder="Enter number 2" /></div>
                 <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn3" placeholder="Enter number 3" /></div>
                 <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn4" placeholder="Enter number 4" /></div>
                 <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn5" placeholder="Enter number 5" /></div>
                 <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn6" placeholder="Enter number 6" /></div>
             </div>
-            <br/>
+            <br />
 
             <hr />
 
@@ -101,12 +107,12 @@
 
     <hr />
 
-        <div class="row">
-            <div class="col">
-                 <p id="sunsetOut"></p>
+    <div class="row">
+        <div class="col">
+            <p id="sunsetOut"></p>
 
-            </div>
         </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -130,18 +136,18 @@
             let output = new Array();
             let tallest = 0;
             let currentBldg = 0;
-                 //here is where to determine if current is larger or smaller than the one before it
+            //here is where to determine if current is larger or smaller than the one before it
             for (let loop = 0; loop <= 5; loop++) {
                 currentBldg = bldgArray[loop];
                 if (currentBldg > tallest) {
                     output.push(currentBldg);
                     tallest = currentBldg;
-                   
+
                 }
 
-                
 
-                //show output 
+
+                //show output
                 $("#sunsetOut").html(`Given the input, <span class='bldgCount'>${output.length}</span> building(s) can see the sunset. <br /> The buildings that can see the sunset are [${output.toString()}]`)
 
 
