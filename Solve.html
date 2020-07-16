@@ -79,20 +79,21 @@
     <div class="container">
         <div class="row">
             <div class="row">
-                <div class="col"><input class="form-control sunsetIn" id="bldg1" placeholder="Enter number 1" /></div>
-                <div class="col"><input class="form-control sunsetIn" id="bldg2" placeholder="Enter number 2" /></div>
-                <div class="col"><input class="form-control sunsetIn" id="bldg3" placeholder="Enter number 3" /></div>
-                <div class="col"><input class="form-control sunsetIn" id="bldg4" placeholder="Enter number 4" /></div>
-                <div class="col"><input class="form-control sunsetIn" id="bldg5" placeholder="Enter number 5" /></div>
-                <div class="col"><input class="form-control sunsetIn" id="bldg6" placeholder="Enter number 6" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn2" placeholder="Enter number 2" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn1" placeholder="Enter number 1" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn3" placeholder="Enter number 3" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn4" placeholder="Enter number 4" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn5" placeholder="Enter number 5" /></div>
+                <div class="col"><input class="form-control sunsetIn" type="number" id="sunsetIn6" placeholder="Enter number 6" /></div>
             </div>
             <br/>
 
             <hr />
 
             <div class="container">
-                <button id="btnSunset" class="btnMarg eWide">Calculate</button>
-
+                <div class="row">
+                    <button id="btnSunset" class="btnMarg eWide">Calculate</button>
+                </div>
             </div>
 
         </div>
@@ -138,8 +139,10 @@
                    
                 }
 
-                //show output here
-                $("#sunsetOut").html(`Given the input, <span class='bldgCount'${output.length}</span> building(s) can see the sunset. <br /> The buildings that can see the sunset are [${output.toString()}]`)
+                
+
+                //show output 
+                $("#sunsetOut").html(`Given the input, <span class='bldgCount'>${output.length}</span> building(s) can see the sunset. <br /> The buildings that can see the sunset are [${output.toString()}]`)
 
 
 
